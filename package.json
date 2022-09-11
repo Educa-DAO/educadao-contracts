@@ -1,10 +1,10 @@
 {
-  "name": "@prb/hardhat-template",
-  "description": "Hardhat-based template for developing Solidity smart contracts",
+  "name": "educadao-contracts",
+  "description": "Smart contracts for the educadao project",
   "version": "1.0.0",
   "author": {
-    "name": "Paul Razvan Berg",
-    "url": "https://github.com/paulrberg"
+    "name": "EducaDAO",
+    "url": "https://educa.dao/"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",

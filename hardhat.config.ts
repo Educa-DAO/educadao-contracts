@@ -42,6 +42,12 @@ function getChainConfig(chain: keyof typeof chainIds): NetworkUserConfig {
     case "bsc":
       jsonRpcUrl = "https://bsc-dataseed1.binance.org";
       break;
+    case "polygon-mainnet":
+      jsonRpcUrl = "https://rpc-mainnet.maticvigil.com";
+      break;
+    case "polygon-mumbai":
+      jsonRpcUrl = "https://rpc-mumbai.maticvigil.com";
+      break;
     default:
       jsonRpcUrl = "https://" + chain + ".infura.io/v3/" + infuraApiKey;
   }
