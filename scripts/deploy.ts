@@ -4,7 +4,7 @@
 //
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
-import { ethers, upgrades } from "hardhat";
+import { ethers } from "hardhat";
 
 import { Certificate__factory, Certification__factory, Course__factory } from "../src/types/factories/contracts";
 
@@ -26,7 +26,11 @@ async function main() {
   console.log("Certificate deployed to:", certificate.address);
 
   const certificationFactory = <Certification__factory>await ethers.getContractFactory("Certification");
-  const certification = await certificationFactory.deploy(course.address, certificate.address);
+  const certification = await certificationFactory.deploy(
+    course.address,
+    certificate.address,
+    ethers.utils.parseEther("10"),
+  );
 
   await certification.deployed();
   console.log("Certification deployed to:", certification.address);
